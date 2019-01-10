@@ -9,11 +9,12 @@ This is not intended to be a "wrapper" for TMX maps. The goal of this library is
 ## Getting Started
 How you can get this running immediately from your computer:
 **Steps**
-1. Create a folder in your monkey2 modules folder named "TiledTools"
+1. Create a folder in your monkey2 modules folder named "tiled-tools"
 2. Open that folder in a terminal
 3. **Clone:** `git clone  https://github.com/Ghouly-The-Ghost/Tiled-for-Monkey2.git .`
         _**note:** Be aware that the **"."** will clone this repository directly to the repository your terminal is in._
-4. **Updating:** use `git pull` in that directory when a new major version is available.
+4. **Installing:** Relaunch Ted2Go. Go into your modules folder and right click on tiled-tools. Rebuild it.
+5. **Updating:** use `git pull` in that directory when a new major version is available.
 
 
 <br/>

@@ -1,6 +1,6 @@
 
 #Import "assets/map.tmx"
-#Import "../tiled-tools"
+#Import "<tiled-tools>"
 
 Using tiledtools.tiled
 
