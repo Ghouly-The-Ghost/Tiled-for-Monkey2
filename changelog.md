@@ -6,7 +6,9 @@ Todo:
 
 ## v0.0.1 (01/09/2019)
 Features:
-	- TinyXML helpers
-	- Functionality for simplifying object related features
+* TinyXML helpers
+* Functionality for simplifying object related features
+
 Fix: 0
+
 Bugfixes: 0
