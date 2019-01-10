@@ -1,0 +1,8 @@
+{
+	"module":"TiledTools",
+	"about":"A TMX/XML focused library to assist with TMX Maps",
+	"author":"Abrahim Noll",
+	"version":"0.0.1",
+	"support":"https://github.com/Ghouly-The-Ghost/Tiled-for-Monkey2",
+	"depends":["std", "tinyxml2"]
+}
