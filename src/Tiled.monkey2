@@ -1,4 +1,4 @@
-Namespace TiledTools.Tiled
+Namespace tiledtools.tiled
 
 #Import "<tinyxml2>"
 #Import "<std>"
@@ -7,7 +7,7 @@ Using tinyxml2
 Using std.collections
 Using std.geom
 Using std.stringio
-Using TiledTools.XML
+Using tiledtools.xml
 
 Function LoadTileMap:XMLElement( location:String, printErrorCode:Bool = True )
 	Local xml := LoadString( location )

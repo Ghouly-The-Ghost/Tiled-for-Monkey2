@@ -1,10 +1,10 @@
 
 #Import "assets/map.tmx"
-#Import "../TiledTools"
+#Import "../tiled-tools"
 
-Using TiledTools.Tiled
+Using tiledtools.tiled
 
-Alias XMLT:TiledTools.XML.XMLTool
+Alias XMLT:tiledtools.xml.XMLTool
 
 Function Main()
 	

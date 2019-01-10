@@ -1,5 +1,5 @@
 {
-	"module":"TiledTools",
+	"module":"tiled-tools",
 	"about":"A TMX/XML focused library to assist with TMX Maps",
 	"author":"Abrahim Noll",
 	"version":"0.0.1",

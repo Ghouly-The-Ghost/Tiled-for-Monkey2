@@ -1,4 +1,4 @@
-Namespace TiledTools.XML
+Namespace tiledtools.xml
 
 #Import "<std>"
 #Import "<tinyxml2>"
