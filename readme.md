@@ -28,4 +28,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the Mozilla Public 2 License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Mozilla Public 2 License - see the [LICENSE.TXT](LICENSE.TXT) file for details.
