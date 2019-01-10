@@ -17,8 +17,8 @@ How you can get this running immediately from your computer:
 
 
 <br/>
-Note: If you do not have git installed see ["here"](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
+Note: [If you don't have **GIT** installed click here.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Authors
 
