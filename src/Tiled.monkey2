@@ -79,6 +79,13 @@ Struct LayerObject
 	End
 	
 	' IDENTIFIERS
+	Property IsRectangle:Bool()
+		Return el.NoChildren()
+	End
+	
+	Property IsPoint:Bool()
+		Return XMLT.HasChildElement( el, "point" )
+	End
 	
 	Property IsEllipse:Bool()
 		Return XMLT.HasChildElement( el, "ellipse" )
