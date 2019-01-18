@@ -141,9 +141,9 @@ Private
 		' Grab last Seperation
 		Local endIndex:=data.Length-1
 		Repeat
-			If data[endIndex]=" " Exit
+			If data[endIndex]=" "[0] Exit
 			endIndex-=1
-		Until endIndex<0
+		Until endIndex<=0
 		
 		' Add points
 		While index<endIndex
@@ -156,9 +156,7 @@ Private
 		
 		' Add last point
 		Local x:= data.Slice( index, data.Find( ",", index ) )
-		index += x.Length + 1
-		Local y:= data.Slice( index, data.Length )
-		index += y.Length + 1 
+		Local y:= data.Slice( index + x.Length + 1, data.Length )
 		points.Push( New Vec2<T>( Float(x), Float(y) ) )
 			
 		Return points
