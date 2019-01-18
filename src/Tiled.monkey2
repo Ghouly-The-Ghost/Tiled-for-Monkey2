@@ -3,6 +3,8 @@ Namespace tiledtools.tiled
 #Import "<tinyxml2>"
 #Import "<std>"
 
+#Import "XMLTool"
+
 Using tinyxml2
 Using std.collections
 Using std.geom
@@ -102,19 +104,31 @@ Struct LayerObject
 	
 	Method GetPolyline:Stack<Vec2f>()
 		Local line:=XMLT.FirstChildElement( el, "polyline" )
-		Return ParsePointList( line.Attribute("points") )
+		Return ParsePointList<Float>( line.Attribute("points") )
 	End
 	
 	Method GetPolygon:Stack<Vec2f>()
 		Local poly:=XMLT.FirstChildElement( el, "polygon" )
-		Return ParsePointList( poly.Attribute("points") )
+		Return ParsePointList<Float>( poly.Attribute("points") )
+	End
+	
+	Method GetVertices<T>:Stack<Vec2<T>>()
+		Local poly:XMLElement
+		If IsPolygon Then 
+			poly=XMLT.FirstChildElement( el, "polygon" )
+		Elseif IsPolyline Then 
+			poly=XMLT.FirstChildElement( el, "polyline" )
+		Else
+			Return Null
+		Endif
+		Return ParsePointList<T>( poly.Attribute("points") )
 	End
 	
 Private
 	
 	' Generates a stack of points from a tiled formatted string
-	Function ParsePointList:Stack<Vec2f>( data:String )
-		Local points:= New Stack<Vec2f>
+	Function ParsePointList<T>:Stack<Vec2<T>>( data:String )
+		Local points:= New Stack<Vec2<T>>
 		Local index:=0
 		Repeat	
 			Local x:= data.Slice( index, data.Find( ",", index ) )
