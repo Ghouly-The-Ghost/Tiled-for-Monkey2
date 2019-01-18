@@ -1,4 +1,4 @@
-Namespace TiledTools
+Namespace tiledtools
 
 #Import "src/Tiled"
 #Import "src/XMLTool"
