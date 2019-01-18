@@ -137,13 +137,29 @@ Private
 	Function ParsePointList<T>:Stack<Vec2<T>>( data:String )
 		Local points:= New Stack<Vec2<T>>
 		Local index:=0
-		Repeat	
+		
+		' Grab last Seperation
+		Local endIndex:=data.Length-1
+		Repeat
+			If data[endIndex]=" " Exit
+			endIndex-=1
+		Until endIndex<0
+		
+		' Add points
+		While index<endIndex
 			Local x:= data.Slice( index, data.Find( ",", index ) )
 			index += x.Length + 1
 			Local y:= data.Slice( index, data.Find( " ", index ) )
 			index += y.Length + 1 
-			points.Push( New Vec2f( Float(x), Float(y) ) )
-		Until index>=data.Length
+			points.Push( New Vec2<T>( Float(x), Float(y) ) )
+		Wend
+		
+		' Add last point
+		Local x:= data.Slice( index, data.Find( ",", index ) )
+		index += x.Length + 1
+		Local y:= data.Slice( index, data.Length )
+		index += y.Length + 1 
+		points.Push( New Vec2<T>( Float(x), Float(y) ) )
 			
 		Return points
 	End
